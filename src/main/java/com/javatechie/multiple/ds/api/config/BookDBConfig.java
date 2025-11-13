@@ -20,13 +20,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "bookEntityManagerFactory", transactionManagerRef = "bookTransactionManager", basePackages = {
-		"com.javatechie.multiple.ds.api.book.repository" })
+@EnableJpaRepositories(entityManagerFactoryRef = "bookEntityManagerFactory", transactionManagerRef = "bookTransactionManager",
+		basePackages = {"com.javatechie.multiple.ds.api.book.repository" })
 public class BookDBConfig {
 
 	@Bean(name = "bookDataSource")
 	@ConfigurationProperties(prefix = "spring.book.datasource")
 	public DataSource dataSource() {
+
 		return DataSourceBuilder.create().build();
 	}
 

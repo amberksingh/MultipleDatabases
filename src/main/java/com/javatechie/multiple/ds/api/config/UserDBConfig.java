@@ -21,13 +21,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "userEntityManagerFactory",transactionManagerRef = "userTransactionManager", basePackages = {
-		"com.javatechie.multiple.ds.api.user.repository" })
+@EnableJpaRepositories(entityManagerFactoryRef = "userEntityManagerFactory",transactionManagerRef = "userTransactionManager",
+		basePackages = {"com.javatechie.multiple.ds.api.user.repository" })
 public class UserDBConfig {
 	@Primary
 	@Bean(name = "dataSource")
 	@ConfigurationProperties(prefix = "spring.user.datasource")
 	public DataSource dataSource() {
+
 		return DataSourceBuilder.create().build();
 	}
 
