@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyScheduler {
 
+    //@EnableScheduling
+    //✅ Spring Boot automatically creates a task scheduler (a background thread pool) that looks for all methods
+    // annotated with @Scheduled and runs them automatically — you never call them manually.
+    //So your job (scheduled method) starts automatically when the application starts
+
     // 1️⃣ Runs every 5 seconds
     @Scheduled(fixedRate = 5000)
     public void task1() {

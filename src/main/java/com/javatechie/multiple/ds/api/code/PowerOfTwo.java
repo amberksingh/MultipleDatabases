@@ -4,7 +4,7 @@ public class PowerOfTwo {
 
     public static void main(String[] args) {
 
-        int number = 32, value = 32;
+        int number = 32, value = 1;
         //1st way
         if (number < 1)
             System.out.println("NOT power of two");

@@ -37,8 +37,8 @@ package com.javatechie.multiple.ds.api.programs;
 //
 //3. Enum is more than constants
 //
-//Each enum constant is actually a public static final object of the enum type.
-//So Day.MONDAY is an instance of Day.
+//EACH ENUM CONSTANT IS ACTUALLY A PUBLIC STATIC FINAL OBJECT OF THE ENUM TYPE.
+//SO DAY.MONDAY IS AN INSTANCE OF DAY.
 //
 //4. Enums with fields and methods
 //enum Color {

@@ -29,12 +29,15 @@ class SingletonStuff {
 public class SingletonMultiThread {
 
     public static void main(String[] args) throws InterruptedException {
+
         Runnable r1 = () -> {
             SingletonStuff instance = SingletonStuff.getInstance();
             System.out.println("instance hashcode = " + instance.hashCode() + " " + Thread.currentThread().getName());
         };
+
         Thread t1 = new Thread(r1);
         Thread t2 = new Thread(r1);
+
         t1.start();
         t2.start();
 

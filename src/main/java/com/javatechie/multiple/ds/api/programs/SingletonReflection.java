@@ -19,7 +19,9 @@ class Perfume {
 
     public static Perfume getInstance() {
         System.out.println("Inside getInstance()..");
-        perfume = new Perfume();
+        if (perfume == null) {
+            perfume = new Perfume();
+        }
         return perfume;
     }
 
@@ -34,6 +36,7 @@ public class SingletonReflection {
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
+
         Perfume perfume1 = Perfume.getInstance();
         System.out.println("perfume1 = " + perfume1.hashCode());
 
@@ -41,7 +44,8 @@ public class SingletonReflection {
         Constructor<Perfume> constructors = Perfume.class.getDeclaredConstructor();
         constructors.setAccessible(true);
         Perfume perfume2 = constructors.newInstance();
-        //avoids getInstance and directly calls constructor-ultimately breaking
+        //avoids getInstance and directly calls constructor-ultimately breaking,
+        // so added null check in constructor to avoid new object creation by throwing exception
         System.out.println("perfume2 = " + perfume2.hashCode());
 
 

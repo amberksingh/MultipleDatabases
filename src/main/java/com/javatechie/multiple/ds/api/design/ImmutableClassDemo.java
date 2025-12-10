@@ -18,14 +18,15 @@ import java.util.List;
 //    public void setNewName(String newName) {
 //        this.newName = newName;
 //    }
-//}
 //
-//    User u = new MutableUser("Rahul");
-//((MutableUser) u).setNewName("Hacked!");
-//        System.out.println(u.getName()); // "Hacked!"
+//
+//    //User u = new MutableUser("Rahul");((MutableUser)u).
+//
+//    //setNewName("Hacked!");
+//    //System.out.println(u.getName()); // "Hacked!"
+//}
 
-
-final class User1 {
+/*final*/ class User1 {
 
     @Override
     public String toString() {
@@ -157,8 +158,8 @@ public class ImmutableClassDemo {
         System.out.println("rahul before = " + rahul);//reading
 
 
-        //rahul.getHobbies().add("coding");
-        //System.out.println("rahul after = " + rahul);//[reading, coding]}. so made changes as below
+        rahul.getHobbies().add("coding");
+        System.out.println("rahul after = " + rahul);//[reading, coding]}. so made changes as below
 
         //public List<String> getHobbies() {
         //        //return hobbies; // ⚠️ exposes internal list
@@ -166,8 +167,8 @@ public class ImmutableClassDemo {
         //    }
 
 
-        //hobbies.add("streaming");
-        //System.out.println("rahul after = " + rahul);//[reading, streaming]
+        hobbies.add("streaming");
+        System.out.println("rahul after = " + rahul);//[reading, streaming]
 
         //this.hobbies = userBuilder1.hobbies;//can be changed by reference, so deep copy
         //hobbies.add("streaming"); this can change the list due to same reference

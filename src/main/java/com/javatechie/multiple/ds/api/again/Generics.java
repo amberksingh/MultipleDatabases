@@ -36,20 +36,6 @@ class Box<T> {
 
 }
 
-//class Top {
-//
-//    T data;
-//
-//    <T> void set(T data) {
-//        this.data = data;
-//    }
-//
-//    <T> T get() {
-//        return data;
-//    }
-//}
-
-
 public class Generics {
 
     public static void main(String[] args) {
@@ -80,7 +66,6 @@ public class Generics {
         Box.printArray(names);
         Box.printArray(nums);
 
-
         ArrayList<Box> list = new ArrayList<>();
         //ArrayList<Box<Integer>> list = new ArrayList<>();
         list.add(stringBox);
@@ -89,7 +74,6 @@ public class Generics {
 
         list.add(integerBox);
         System.out.println("list = " + list);
-
 
 //        ArrayList<String> g = new ArrayList<>();
 //        HashMap<String, Integer> map = new HashMap<String, Integer>();
